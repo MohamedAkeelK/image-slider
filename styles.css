@@ -26,7 +26,7 @@ body {
 }
 
 #img1 {
-  justify-self: center;
+  display: none;
 }
 
 #img2 {
@@ -40,13 +40,3 @@ body {
 #img4 {
   display: none;
 }
-
-/* .img-ctr {
-  width: 100%;
-  height: 100%;
-} */
-
-/* img {
-  width: 100%;
-  height: 100%;
-} */
