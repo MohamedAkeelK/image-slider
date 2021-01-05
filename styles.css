@@ -10,6 +10,7 @@ body {
 
 .container {
   padding: 10px;
+  height: 100vh;
   background-color: rgb(30, 30, 31);
   display: flex;
   flex-direction: row;
@@ -25,7 +26,7 @@ body {
 
 .indv-img {
   width: 85%;
-  height: 95vh;
+  height: 100%;
   animation: myfirst 0.8s 1;
   animation-direction: normal;
 }
@@ -61,23 +62,23 @@ body {
   display: none;
 }
 
+/* buttons  prev and next*/
+
 .prev,
 .next {
-  padding: 25px;
+  padding: 5px 20px;
   background-color: rgb(65, 65, 65);
   color: white;
   border: none;
   font-size: 2rem;
   outline: none;
-
-  /* justify-self: flex-end; */
 }
 
 .prev {
-  margin-left: 60px;
+  margin-left: 3%;
 }
 .next {
-  margin-right: 60px;
+  margin-right: 3%;
 }
 
 .prev:hover,
