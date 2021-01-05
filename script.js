@@ -17,7 +17,7 @@ const photo4 = document.createElement('img');
 const prevBtn = document.createElement('button');
 const nextBtn = document.createElement('button');
 
-// set text to btns
+// set the text in btns
 prevBtn.textContent= "<";
 nextBtn.textContent = ">";
 
@@ -41,8 +41,6 @@ photo3.id = "img3";
 photo4.className = "indv-img";
 photo4.id = "img4";
 
-// images.classList.add("mySlides w3-animate-fading");
-
 // create array containing each img
 const photos = [photo1, photo2, photo3, photo4];
 
@@ -55,18 +53,17 @@ container.append(nextBtn);
 
 
 
+//image slider logic --- >
 
-// default img to display
+// set default img to display as photo1
 photo1.style.display = "block";
 
 // set a counter
 let counter= 0;
 
+// helper functions --->
 
-
-// functions to callback
-
-// clear display styles to photos
+// clear display styles to photos - loop thru each photo and clear the display
 let clear = ()=> {
     for(let i = 0; i < photos.length; i++) {
         photos[i].style.display = "none";
@@ -78,19 +75,21 @@ let next = ()=> {
     clear();
         counter++;
         photos[counter].style.display = "block";
-        console.log('counter: ' + counter + " next func")
-}
+        console.log(counter + " FUNC NEXT")
+    }
 
 // get the prev photo
 let prev = () => {
     clear();
     counter--;
-    console.log(counter)
+    console.log(counter + " FUNC PREV")
     
     //check to see if counter = -1
     if(counter === -1) {
         counter = 3;
         photos[counter].style.display = "block";
+        console.log(counter + " CHECK for -1 ")
+
     }
     photos[counter].style.display = "block";
 
@@ -102,23 +101,24 @@ function imgSlide(e) {
 
     // clicking next btn
     if(e.target.classList.contains('next') && (counter < 3)) {  
-        console.log('fired')
+        console.log(counter + ' NEXT fired')
         next();     
     }
     else if(e.target.classList.contains('next') && (counter = 3)) {
-        console.log('firedddddd')
+        console.log(counter + ' NEXT' + ' else if fired')
         counter = -1;
         next();
     }
 
     //clicking prev btn
     if(e.target.classList.contains('prev') && (counter >= 0)) {
+        console.log(counter + ' PREV fired' + ' else if fired')
         prev();
     }
     
     if(e.target.classList.contains('prev') && (counter < 0)) {
         counter = 4;
-        console.log("when click prev and counter is 0 counter is " + counter)
+        console.log(counter + ' PREV fired and' + ' else if fired')
         prev();
     }
 };
