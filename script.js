@@ -2,6 +2,7 @@
 // selectors
 const slider = document.getElementById('slider');
 const container = document.querySelector('.container');
+// const images = document.querySelectorAll('./indv-img');
 
 // event listeners
 container.addEventListener('click', imgSlide);
@@ -40,6 +41,8 @@ photo3.id = "img3";
 photo4.className = "indv-img";
 photo4.id = "img4";
 
+// images.classList.add("mySlides w3-animate-fading");
+
 // create array containing each img
 const photos = [photo1, photo2, photo3, photo4];
 
@@ -49,6 +52,9 @@ slider.append(...photos);
 // append btns to container div
 container.prepend(prevBtn);
 container.append(nextBtn);
+
+
+
 
 // default img to display
 photo1.style.display = "block";
