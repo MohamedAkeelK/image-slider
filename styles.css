@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+}
+
+.container {
+  padding: 10px;
+  background-color: aquamarine;
+}
+
+#slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.indv-img {
+  width: 80%;
+  height: 70%;
+}
+
+#img1 {
+  justify-self: center;
+}
+
+#img2 {
+  display: none;
+}
+
+#img3 {
+  display: none;
+}
+
+#img4 {
+  display: none;
+}
+
+/* .img-ctr {
+  width: 100%;
+  height: 100%;
+} */
+
+/* img {
+  width: 100%;
+  height: 100%;
+} */
