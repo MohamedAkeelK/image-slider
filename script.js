@@ -79,7 +79,15 @@ let next = ()=> {
 let prev = () => {
     clear();
     counter--;
+    console.log(counter)
+    
+    //check to see if counter = -1
+    if(counter === -1) {
+        counter = 3;
+        photos[counter].style.display = "block";
+    }
     photos[counter].style.display = "block";
+
 }
 
 
@@ -96,15 +104,15 @@ function imgSlide(e) {
         counter = -1;
         next();
     }
-    
+
     //clicking prev btn
-    if(e.target.classList.contains('prev') && (counter > 0)) {
+    if(e.target.classList.contains('prev') && (counter >= 0)) {
         prev();
     }
-
-    if(e.target.classList.contains('prev') && (counter === 0)) {
+    
+    if(e.target.classList.contains('prev') && (counter < 0)) {
         counter = 4;
-        console.log("prev0 fired" + counter)
+        console.log("when click prev and counter is 0 counter is " + counter)
         prev();
     }
 };
